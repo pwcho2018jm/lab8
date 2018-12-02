@@ -20,7 +20,7 @@ public class Zadanie1 {
         
         System.out.println("Driver loaded");
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/zadanie1?" +
+            conn = DriverManager.getConnection("jdbc:mysql://10.0.10.3:3306/zadanie1?" +
                                                 "user=jmitura&password=password");
         } catch (Exception ex) {
             System.out.println("Error: Couldn't connect to DB");
