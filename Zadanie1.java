@@ -17,14 +17,18 @@ public class Zadanie1 {
             System.out.println("Error: Couldn't load driver");
             return;
         }
-
+        
+        System.out.println("Driver loaded");
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://10.0.10.3/zadanie1?" +
+            conn = DriverManager.getConnection("jdbc:mysql://localhost/zadanie1?" +
                                                 "user=jmitura&password=password");
         } catch (Exception ex) {
             System.out.println("Error: Couldn't connect to DB");
             return;
         }
+        
+        
+        System.out.println("Connection established");
         if (!create())
             return;
 
