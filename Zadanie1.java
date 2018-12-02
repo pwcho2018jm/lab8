@@ -21,7 +21,7 @@ public class Zadanie1 {
         System.out.println("Driver loaded");
         for (int i = 0; i < 12; ++i) {
             try {
-                conn = DriverManager.getConnection("jdbc:mysql://10.0.10.3:3306/zadanie1?" +
+                conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/zadanie1?" +
                                                     "user=jmitura&password=password");
                 break;
             } catch (Exception ex) {
