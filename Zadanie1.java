@@ -21,7 +21,7 @@ public class Zadanie1 {
         System.out.println("Driver loaded");
         for (int i = 0; i < 12; ++i) {
             try {
-                conn = DriverManager.getConnection("jdbc:mysql://mysql:3306/zadanie1?" +
+                conn = DriverManager.getConnection("jdbc:mysql://10.0.10.3:3306/zadanie1?" +
                                                     "user=jmitura&password=password");
                 break;
             } catch (Exception ex) {
@@ -30,11 +30,11 @@ public class Zadanie1 {
                     System.out.println("Retry in 5 sec");
             }
             try	{
-				Thread.sleep(5000);
-			} catch(InterruptedException ex)
+		Thread.sleep(5000);
+	    } catch(InterruptedException ex)
             {
-				Thread.currentThread().interrupt();
-			}
+		Thread.currentThread().interrupt();
+	    }
         }
         
         
