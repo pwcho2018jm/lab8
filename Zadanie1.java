@@ -19,12 +19,17 @@ public class Zadanie1 {
         }
         
         System.out.println("Driver loaded");
-        try {
-            conn = DriverManager.getConnection("jdbc:mysql://10.0.10.3:3306/zadanie1?" +
-                                                "user=jmitura&password=password");
-        } catch (Exception ex) {
-            System.out.println("Error: Couldn't connect to DB");
-            return;
+        for (int i = 0; i < 12; ++i) {
+            try {
+                conn = DriverManager.getConnection("jdbc:mysql://10.0.10.3:3306/zadanie1?" +
+                                                    "user=jmitura&password=password");
+                break;
+            } catch (Exception ex) {
+                System.out.println("Error: Couldn't connect to DB");
+                if (i < 11)
+                    System.out.println("Retry in 5 sec");
+            }
+            Thread.sleep(5000);
         }
         
         
