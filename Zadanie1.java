@@ -17,7 +17,7 @@ public class Zadanie1 {
 
             Class.forName("com.mysql.jdbc.Driver").newInstance();
 
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/zadanie1?" +
+            conn = DriverManager.getConnection("jdbc:mysql://10.0.10.3/zadanie1?" +
                                                 "user=jmitura&password=password");
         } catch (Exception ex) {
             // handle the error
