@@ -29,7 +29,12 @@ public class Zadanie1 {
                 if (i < 11)
                     System.out.println("Retry in 5 sec");
             }
-            Thread.sleep(5000);
+            try	{
+				Thread.sleep(5000);
+			} catch(InterruptedException ex)
+            {
+				Thread.currentThread().interrupt();
+			}
         }
         
         
