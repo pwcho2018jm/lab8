@@ -1,6 +1,5 @@
 FROM java:8
-COPY mysql-connector-java-5.1.6-bin.jar ./
+COPY mysql-connector-java-8.0.13.jar ./
 COPY Zadanie1.java ./
-EXPOSE 3306
 RUN javac Zadanie1.java
-CMD ["java", "-cp", "mysql-connector-java-5.1.6-bin.jar:.", "Zadanie1"]
+CMD ["java", "-cp", "mysql-connector-java-8.0.13.jar:.", "Zadanie1"]
