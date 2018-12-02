@@ -5,7 +5,7 @@ import java.sql.ResultSet;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Scanner;
-
+import java.lang.Thread;
 
 public class Zadanie1 {
     static Connection conn = null;
